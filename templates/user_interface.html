@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>User Interface</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .top-bar {
+            background-color: white; /* Dark blue color */
+            color: #fff;
+            margin: 0;
+            padding: 5px 10px; /* Adjusted padding */
+            height: 50px; /* Adjusted height */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            max-width: 10px;
+            size: 5px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu li {
+            margin-left: 80px;
+            font-style: italic;
+            text-align: right;
+        }
+
+        .menu a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .school-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px; /* Adjust the gap between images */
+            margin-top: 20px;
+        }
+
+        .school-image {
+            width: 50%;
+            height: auto;
+            border-radius: 10px; /* Add border-radius for rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow for a subtle effect */
+
+        }
+
+        h1 {
+            color: #001f3f; /* Dark blue color */
+            margin-top: 20px;
+            font-family: cursive;
+        }
+
+        .account-icon {
+            display: flex;
+            align-items: center;
+            outline-color: #fff;
+
+}
+
+.account-icon img {
+    margin-right: 5px; /* Adjust the spacing between the icon and text */
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="static/prolink_logo.png" alt="Company Logo" width="100" height="100">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <!-- Add other menu items as needed -->
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="account-icon">
+            <img src="static/icon_2.png" alt="Account Icon" width="40" height="40"> <!-- Add your account icon image -->
+            <a href="{{ url_for('account_settings') }}">Account Settings</a>
+        </div>
+        <div class="sign-out">
+            <a href="{{ url_for('logout') }}">Sign Out</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome to the User Interface</h1>
+
+         <!-- School Image Grid -->
+        <div class="school-grid">
+            <a href="https://churchillschoolzim.com/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/churchill_boys_high.jpg" alt="School 1">
+            </a>
+            <a href="https://hellenicacademy.ac.zw/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/hellenic.png" alt="School 2">
+            </a>
+            <a href="https://peschool.co.zw/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/princeedward.jpg" alt="School 3">
+            </a>
+            <a href="http://www.falconcollege.com/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/falcon.jpg" alt="School 3">
+            </a>
+            <!-- Add more images as needed -->
+
+            <a href="https://peterhousegroup.co.zw/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/Peterhouse.jpg" alt="School 4">
+            </a>
+            <a href="https://www.mcc.ac.zw/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/mcc.jpg" alt="School 5">
+            </a>
+            <a href="https://www.hillcrestcollege.net/home/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/hillcrest.jpg" alt="School 6">
+            </a>
+            <a href="https://wiseowlschool.co.zw/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/wise_owl.jpg" alt="School 3">
+            </a>
+            <!-- Add more images as needed -->
+
+            <a href="http://www.watershed.ac.zw/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/watershed.jpg" alt="School 7">
+            </a>
+            <a href="https://www.stgeorges.co.zw/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/stgeorges.jpg" alt="School 8">
+            </a>
+            <a href="https://stjohnszim.com/" target="_blank" rel="noopener noreferrer">
+                <img class="school-image" src="static/stjohns.png" alt="School 9">
+            </a>
+            <!-- Add more images as needed -->
+        </div>
+
+        <!-- Add more content as needed -->
+    </div>
+</body>
+
+</html>

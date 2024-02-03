@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            max-height: 50px; /* Adjust as needed */
+        }
+
+        #user-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        #search-bar {
+            margin-right: 100px;
+        }
+
+        #social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        #social-icons img {
+            margin-right: 5px;
+            max-height: 20px; /* Adjust as needed */
+        }
+
+        #player-details {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        nav {
+            background-color: #ddd;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .button {
+            background-color: blueviolet; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 10px 20px; /* Some padding */
+            font-size: 16px; /* Set a font size */
+            cursor: pointer; /* Mouse pointer on hover */
+        }
+
+        .player-info {
+            display: flex;
+            align-items: center;
+        }
+
+        #school-badge {
+            max-height: 30px; /* Adjust as needed */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img id="logo" src="static/PROLINK.png" alt="Company Logo">
+
+    <div id="user-bar">
+        <input type="text" id="search-bar" placeholder="Search">
+
+        <div id="social-icons">
+            <img src="facebook_icon.png" alt="Facebook">
+            <img src="twitter_icon.png" alt="Twitter">
+            <img src="instagram_icon.png" alt="Instagram">
+            <img src="tiktok_icon.png" alt="Tiktok">
+            <!-- Add more social media icons as needed -->
+        </div>
+
+        <span id="user-name">Logged In User</span>
+    </div>
+</header>
+
+<nav>
+    <div class="player-info">
+        <img id="school-badge" src="school_badge.png" alt="School Badge">
+        <h2>Player Name</h2>
+    </div>
+    <div>
+        <a href="#" class="button">Overview</a>
+        <a href="#" class="button">Events</a>
+        <a href="#" class="button">Career</a>
+        <a href="#" class="button">Prolink Report</a>
+        <a href="#" class="button">MyClips</a>
+    </div>
+</nav>
+
+<div id="player-details">
+    <h2>Player Name</h2>
+    <p>Position: Forward</p>
+    <p>Age: 25</p>
+    <p>Nationality: Country</p>
+    <!-- Add more player details as needed -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="static/PROLINK.png" alt="Company Logo" width="100" height="100">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('solutions') }}">Solutions</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <!-- Add other menu items as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="containers">
+        <h1>Registration</h1>
+        <form action="{{ url_for('register') }}" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="lastname">Lastname:</label>
+            <input type="text" id="lastname" name="lastname" required>
+            <label for="firstname">Firstname:</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <label for="dateofbirth">Birthday:</label>
+            <input type="date" id="dateofbirth" name="dateofbirth" required>
+            <label for="club">Club:</label>
+            <input type="text" id="club" name="club" required>
+            <label for="school">School:</label>
+            <input type="text" id="school" name="school" required>
+            <label for="address1">Address 1:</label>
+            <input type="text" id="address1" name="address1" required>
+            <label for="address2">Address 2:</label>
+            <input type="text" id="address2" name="address2" required>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+            <label for="telephone">Telephone:</label>
+            <input type="text" id="telephone" name="telephone" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <!-- Add other form fields based on your requirements -->
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+

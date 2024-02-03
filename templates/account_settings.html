@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Account Settings</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="static/prolink_logo.png" alt="Company Logo" width="100" height="100">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('user_interface') }}">User Interface</a></li>
+                <!-- Add other menu items as needed -->
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="account-icon">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="{{ current_user.username }}" readonly>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="general.html" id="general">General</a>
+        <a href="career.html" id="career">Career</a>
+        <a href="matches.html" id="matches">Matches</a>
+      </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Account Information Container -->
+        <div class="account-container">
+            <!-- Display user information -->
+            <div class="account-info">
+                <form action="{{ url_for('account_settings') }}" method="post">
+                    <p>Last Name: {{ user.lastname }}</p>
+                    <p>First Name: {{ user.firstname }}</p>
+                    <p>Date of Birth: {{ user.dateofbirth }}</p>
+                    <p>Club: {{ user.club }}</p>
+                    <p>School: {{ user.school }}</p>
+                    <p>Address 1: {{ user.address1 }}</p>
+                    <p>Address 2: {{ user.address2 }}</p>
+                    <p>City: {{ user.city }}</p>
+                    <p>Country: {{ user.country }}</p>
+                    <p>Telephone: {{ user.telephone }}</p>
+                    <p>Email: {{ user.email }}</p>
+                </form>
+            </div>
+
+            <!-- Account Information Update Form -->
+            <div class="account-form">
+                <form action="{{ url_for('account_settings') }}" method="post">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="{{ current_user.username }}" readonly>
+
+                    <!-- Add other form fields based on your requirements -->
+                    <label for="lastname">Lastname:</label>
+                    <input type="text" id="lastname" name="lastname" value="{{ user.lastname }}" required>
+
+                    <label for="firstname">Firstname:</label>
+                    <input type="text" id="firstname" name="firstname" value="{{ user.firstname }}" required>
+
+                    <label for="dateofbirth">Birthday:</label>
+                    <input type="date" id="dateofbirth" name="dateofbirth" value="{{ user.dateofbirth }}" required>
+
+                    <label for="club">Club:</label>
+                    <input type="text" id="club" name="club" value="{{ user.club }}" required>
+
+                    <label for="school">School:</label>
+                    <input type="text" id="school" name="school" value="{{ user.school }}" required>
+
+                    <!-- Add more form fields as needed -->
+
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
